@@ -14,7 +14,7 @@ export class App {
    }
 
    pelicula={
-    titulo:'la que te tragas',
+    titulo:'Hola mundo',
     fechaLanzamiento: new Date(),
     precio: 2353
    }

@@ -1,0 +1,63 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Figuras con Radio Boton -->
+<div class="container mt-4">
+  <div class="card p-4">
+    <h3>Operaciones con Figuras Geométricas</h3>
+    <form>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="num1_radio" class="form-label">Número 1 (Base / Radio)</label>
+          <input [(ngModel)]="base" type="number" name="num1_radio" class="form-control" id="num1_radio" placeholder="Ingresa el número 1">
+        </div>
+
+        <div class="col-md-6">
+          <label for="num2_radio" class="form-label">Número 2 (Altura)</label>
+          <input [(ngModel)]="altura" type="number" name="num2_radio" class="form-control" id="num2_radio" placeholder="Ingresa el número 2">
+        </div>
+
+        <div class="col-12 mt-3">
+          <label class="form-label d-block fw-bold">Selecciona la figura:</label>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="operacion_grupo" value="rectangulo" [(ngModel)]="opcionSeleccionada" id="rectangulo_radio">
+            <label class="form-check-label" for="rectangulo_radio">Rectángulo</label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="operacion_grupo" value="cuadrado" [(ngModel)]="opcionSeleccionada" id="cuadrado_radio">
+            <label class="form-check-label" for="cuadrado_radio">Cuadrado</label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="operacion_grupo" value="triangulo" [(ngModel)]="opcionSeleccionada" id="triangulo_radio">
+            <label class="form-check-label" for="triangulo_radio">Triángulo</label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="operacion_grupo" value="pentagono" [(ngModel)]="opcionSeleccionada" id="pentagono_radio">
+            <label class="form-check-label" for="pentagono_radio">Pentágono</label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="operacion_grupo" value="circulo" [(ngModel)]="opcionSeleccionada" id="circulo_radio">
+            <label class="form-check-label" for="circulo_radio">Círculo</label>
+          </div>
+        </div>
+
+        <div class="col-12 mt-3">
+          <button type="button" class="btn btn-primary" (click)="calcular()">Calcular</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Resultados generales -->
+<div class="container mt-3">
+  <h2 *ngIf="opcionSeleccionada === 'rectangulo'">Resultado Rectángulo: {{ resultadorectangulo }}</h2>
+  <h2 *ngIf="opcionSeleccionada === 'cuadrado'">Resultado Cuadrado: {{ resultadocuadrado }}</h2>
+  <h2 *ngIf="opcionSeleccionada === 'triangulo'">Resultado Triángulo: {{ resultadotriangulo }}</h2>
+  <h2 *ngIf="opcionSeleccionada === 'pentagono'">Resultado Pentágono: {{ resultadopentagono }}</h2>
+  <h2 *ngIf="opcionSeleccionada === 'circulo'">Resultado Círculo: {{ resultadocirculo }}</h2>
+</div>
