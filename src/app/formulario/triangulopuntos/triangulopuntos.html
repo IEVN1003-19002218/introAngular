@@ -1,0 +1,111 @@
+<div class="container mt-4">
+
+  <div class="card p-4">
+
+    <h3>Puntos del triángulo</h3>
+
+    <h5 class="mt-3">Punto A</h5>
+
+    <div class="row">
+      <div class="col-md-6">
+        <label class="form-label">X1</label>
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="x1"
+          name="x1"
+        >
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Y1</label>
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="y1"
+          name="y1"
+        >
+      </div>
+    </div>
+
+    <h5 class="mt-4">Punto B</h5>
+
+    <div class="row">
+      <div class="col-md-6">
+        <label class="form-label">X2</label>
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="x2"
+          name="x2"
+        >
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Y2</label>
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="y2"
+          name="y2"
+        >
+      </div>
+    </div>
+
+    <h5 class="mt-4">Punto C</h5>
+
+    <div class="row">
+      <div class="col-md-6">
+        <label class="form-label">X3</label>
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="x3"
+          name="x3"
+        >
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Y3</label>
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="y3"
+          name="y3"
+        >
+      </div>
+    </div>
+
+    <button
+      type="button"
+      class="btn btn-primary mt-4"
+      (click)="AnalizarPuntos()"
+    >
+      Analizar puntos
+    </button>
+
+    <div class="mt-4">
+
+      <h4>Resultado</h4>
+
+      <p>Punto A: ({{ x1 }}, {{ y1 }})</p>
+      <p>Punto B: ({{ x2 }}, {{ y2 }})</p>
+      <p>Punto C: ({{ x3 }}, {{ y3 }})</p>
+
+      @if (FormaTriangulo) {
+
+        <p>Los puntos forman un triángulo.</p>
+        <p>Área: {{ area }}</p>
+        <p>Tipo de triángulo: {{ TipoTriangulo }}</p>
+
+      } @else {
+
+        <p>Los puntos no forman un triángulo.</p>
+
+      }
+
+    </div>
+
+  </div>
+
+</div>

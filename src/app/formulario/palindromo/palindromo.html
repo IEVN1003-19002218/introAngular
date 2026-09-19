@@ -1,0 +1,58 @@
+<div class="container mt-4">
+
+  <div class="card p-4">
+
+    <h3>Analizador de Palíndromos</h3>
+
+    <div class="mb-3">
+
+      <label class="form-label">
+        Ingresa una frase
+      </label>
+
+      <input
+        type="text"
+        class="form-control"
+        name="palabra"
+        [(ngModel)]="palabra"
+        placeholder="Ejemplo: Anita lava la tina"
+      >
+
+    </div>
+
+    <button
+      type="button"
+      class="btn btn-primary"
+      (click)="Analizarlafrase()"
+    >
+      Analizar frase
+    </button>
+
+    <div class="mt-4">
+
+      <p>
+        <strong>Número de vocales:</strong>
+        {{ NumeroDeVocales }}
+      </p>
+
+      <p>
+        <strong>Número de consonantes:</strong>
+        {{ NumeroDeConsonantes }}
+      </p>
+
+      <p>
+        <strong>¿Es palíndromo?</strong>
+
+        @if (EsPalindromo) {
+          Sí
+        } @else {
+          No
+        }
+
+      </p>
+
+    </div>
+
+  </div>
+
+</div>

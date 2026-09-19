@@ -9,9 +9,22 @@ import { HeroesFilterPipe } from './heroes/heroes-filter-pipe';
 import { OperasBas } from './formulario/operas-bas/operas-bas';
 import { DistanciaEntreDosPuntos } from './formulario/distancia-entre-dos-puntos/distancia-entre-dos-puntos';
 import { Figuras } from './formulario/figuras/figuras';
+import { Palindromo } from './formulario/palindromo/palindromo';
+import { Validaciondeusuarioycontrasena } from './formulario/validaciondeusuarioycontrasena/validaciondeusuarioycontrasena';
+import { Triangulopuntos } from './formulario/triangulopuntos/triangulopuntos';
 
 @NgModule({
-  declarations: [App, HeroesList, HeroesFilterPipe, OperasBas, DistanciaEntreDosPuntos, Figuras],
+  declarations: [
+    App,
+    HeroesList,
+    HeroesFilterPipe,
+    OperasBas,
+    DistanciaEntreDosPuntos,
+    Figuras,
+    Palindromo,
+    Validaciondeusuarioycontrasena,
+    Triangulopuntos,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
